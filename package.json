@@ -1,0 +1,42 @@
+{
+  "name": "my_ai_bot-backend",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.17",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^16.11.10",
+    "@types/uuid": "^9.0.2",
+    "ts-node": "10.7.0",
+    "typescript": "4.5.2"
+  },
+  "dependencies": {
+    "@google-ai/generativelanguage": "^1.0.0",
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-validator": "^6.14.2",
+    "google-auth-library": "^9.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.14.1",
+    "nodemon": "^2.0.22",
+    "openai": "^3.2.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "0.3.16",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "start": "nodemon src/server.ts --ext ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "db:migration": "typeorm-ts-node-commonjs migration:generate -d src/database/data-source.ts src/database/migrations/migrations",
+    "db:run": "typeorm-ts-node-commonjs migration:run -d src/database/data-source.ts"
+  }
+}
